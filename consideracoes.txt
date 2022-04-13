@@ -1,0 +1,20 @@
+Recharts
+Gráfico de radar, deveria coletar as informações da API na sessão categorias, retornar os nomes e resultados e adicionar a data[]
+
+API Mercado Libre
+POST https://api.mercadolibre.com/oauth/token
+
+Parâmetros
+grant_type= authorization_code
+client_id= 8685824602582630
+client_secret= cNaQSVLNqKSdo5pbVvbFY0Bjhwl4sw1O
+code= $SERVER_GENERATED_AUTHORIZATION_CODE**
+redirect_uri= http://localhost
+
+Coloque o seguinte URL na janela de seu navegador para obter a autorização:
+https://auth.mercadolivre.com.br/authorization?response_type=code&client_id=8685824602582630&redirect_uri=http://localhost
+Vai gerar:
+https://http://localhost?code=**SERVER_GENERATED_AUTHORIZATION_CODE
+
+Após a requisição ele gera um app_user, que é usado para retornar as informações da API
+O problema é que é necessário gerar um novo token a cada 6 horas, não vai de forma automática
